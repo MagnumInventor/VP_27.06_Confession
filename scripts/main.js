@@ -15,7 +15,6 @@ window.addEventListener('DOMContentLoaded', () => {
             mainDate.style.opacity = '0';
             setTimeout(() => {
                 mainDate.style.display = 'none';
-                // Додаємо новий вміст
                 const newContent = document.createElement('div');
                 newContent.className = 'after-main-date';
                 newContent.innerHTML = `<h2>I'm so happy to know you! 💗</h2>`;
@@ -28,11 +27,7 @@ window.addEventListener('DOMContentLoaded', () => {
             }, 1000);
         }
     }, 5000);
-});
-
-    
-
-    function flipCard(card) {
+        function flipCard(card) {
         card.classList.toggle('flipped');
     }
 
@@ -57,3 +52,7 @@ window.addEventListener('DOMContentLoaded', () => {
         card.addEventListener('click', showNextCard);
     });
 });
+});
+
+    
+
