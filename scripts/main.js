@@ -56,22 +56,42 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-        function flipCard(card) {
-        card.classList.toggle('flipped');
-    }
-
-    function showNextCard() {
-        if (currentCard < cards.length) {
-            flipCard(cards[currentCard]);
-            currentCard++;
-            if (currentCard === cards.length) {
-                setTimeout(() => {
-                    finalScreen.classList.add('visible');
-                    wipeEffect();
-                }, 1000);
+        let autoNextTimeout = null;
+        
+        function showCard(index) {
+            cards.forEach((card, i) => {
+                card.style.display = i === index ? '' : 'none';
+                card.style.opacity = i === index ? '1' : '0';
+            });
+            if (index < cards.length) {
+                clearTimeout(autoNextTimeout);
+                autoNextTimeout = setTimeout(() => {
+                    showNextCard();
+                }, 10000); // 10 seconds
             }
         }
-    }
+        
+        function showNextCard() {
+            if (currentCard < cards.length) {
+                showCard(currentCard);
+                currentCard++;
+            } else {
+                cards.forEach(card => card.style.display = 'none');
+                finalScreen.classList.add('visible');
+                wipeEffect();
+            }
+        }
+        
+        // Initial display after cards are revealed
+        function startCardSequence() {
+            currentCard = 0;
+            showNextCard();
+            cards.forEach(card => {
+                card.addEventListener('click', showNextCard);
+            });
+        }
+        
+        // Call startCardSequence() after revealCardsSequentially if you want this logic
 
     function wipeEffect() {
         finalMessage.classList.add('visible');
