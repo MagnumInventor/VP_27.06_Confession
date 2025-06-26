@@ -37,7 +37,6 @@ window.addEventListener('DOMContentLoaded', () => {
             document.getElementById('card1'),
             document.getElementById('card2'),
             document.getElementById('card3'),
-            document.getElementById('card5'),
             document.getElementById('finalScreen')
         ];
         let delays = [0, 4000, 5000, 4000, 5000]; // ms, adjust as you wish (3-10s)
