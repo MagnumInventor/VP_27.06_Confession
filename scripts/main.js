@@ -17,7 +17,12 @@ window.addEventListener('DOMContentLoaded', () => {
                 mainDate.style.display = 'none';
                 const newContent = document.createElement('div');
                 newContent.className = 'after-main-date';
-                newContent.innerHTML = `<h2>I'm so happy to know you! 💗</h2>`;
+
+
+                newContent.innerHTML = `<h2>Сподівюся ти ! 💗</h2>`;
+
+
+                
                 document.querySelector('.gradient').prepend(newContent);
                 newContent.style.opacity = '0';
                 newContent.style.transition = 'opacity 1s';
