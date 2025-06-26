@@ -4,6 +4,34 @@ document.addEventListener('DOMContentLoaded', () => {
     const finalMessage = document.querySelector('.final-message');
     let currentCard = 0;
 
+
+// ...existing code...
+
+window.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+        const mainDate = document.querySelector('.main-date');
+        if (mainDate) {
+            mainDate.style.transition = 'opacity 1s';
+            mainDate.style.opacity = '0';
+            setTimeout(() => {
+                mainDate.style.display = 'none';
+                // Додаємо новий вміст
+                const newContent = document.createElement('div');
+                newContent.className = 'after-main-date';
+                newContent.innerHTML = `<h2>I'm so happy to know you! 💗</h2>`;
+                document.querySelector('.gradient').prepend(newContent);
+                newContent.style.opacity = '0';
+                newContent.style.transition = 'opacity 1s';
+                setTimeout(() => {
+                    newContent.style.opacity = '1';
+                }, 50);
+            }, 1000);
+        }
+    }, 5000);
+});
+
+    
+
     function flipCard(card) {
         card.classList.toggle('flipped');
     }

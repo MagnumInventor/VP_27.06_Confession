@@ -34,6 +34,18 @@ body {
   }
 }
 
+.after-main-date {
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: "Quicksand", "Segoe UI", sans-serif;
+  font-size: 2rem;
+  color: #b48fc2;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 24px;
+  padding: 24px 16px;
+  box-shadow: 0 4px 24px 0 rgba(180, 143, 194, 0.08);
+}
+
 .container {
   position: relative;
   width: 80%;
@@ -115,4 +127,54 @@ body {
   overflow: hidden;
   white-space: nowrap;
   animation: wipe 1s forwards;
+}
+
+h1 {
+  font-size: 148px;
+  color: #e2d1d1;
+  text-align: center;
+  margin: 0;
+  text-shadow: black 2px 2px 4px;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+}
+
+h2 {
+  font-size: 108px;
+  color: #e2d1d1;
+  text-align: center;
+  margin: 0;
+  text-shadow: black 2px 2px 4px;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+}
+
+h3 {
+  font-size: 68px;
+  color: #e2d1d1;
+  text-align: center;
+  margin: 0;
+  text-shadow: black 2px 2px 4px;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+}
+
+h4 {
+  font-size: 48px;
+  color: #e2d1d1;
+  text-align: center;
+  margin: 0;
+  text-shadow: black 2px 2px 4px;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+}
+
+h5 {
+  font-size: 28px;
+  color: #e2d1d1;
+  text-align: center;
+  margin: 0;
+  text-shadow: black 2px 2px 4px;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
 }
