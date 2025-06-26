@@ -190,3 +190,34 @@ h5 {
   display: block;
   margin: 0 auto;
 }
+
+button {
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button#yes {
+  background-color: #4caf50;
+  color: white;
+}
+
+button#yes:hover {
+  background-color: #45a049;
+}
+
+button#no {
+  background-color: #f44336;
+  color: white;
+}
+
+button#no:hover {
+  background-color: #e53935;
+}
+
+button#yes.enlarged {
+  transform: scale(1.3);
+}

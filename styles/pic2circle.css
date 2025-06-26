@@ -12,7 +12,7 @@
 
 .inner {
   --w: 100px;
-  --h: 150px;
+  --h: 50px;
   --translateZ: calc((var(--w) + var(--h)) + 0px);
   --rotateX: -15deg;
   --perspective: 1000px;
