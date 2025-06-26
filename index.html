@@ -76,7 +76,7 @@
 
 
 
-        <div class="card" id="card5">
+        <div class="card" id="card4">
             <div class="card-front">
                 <h2>Card 5 Text</h2>
             </div>
@@ -88,10 +88,28 @@
 
         <div class="final-screen" id="finalScreen">
             
-            <h2>Will you be my girl? 💖</h2>
+            <h2>Will you be my gurl? 💖</h2>
             <img class="medium-gif" src="https://media.tenor.com/_lmitpAV2egAAAAM/rigby-cat.gif" alt="MeFr" />
 
-        </div>
+    <div class="buttons">
+      <button id="yes">YES SIRRR!</button>
+      <button id="no">Nah</button>
+    </div>
+  </div>
+
+  <script>
+    const yesButton = document.getElementById('yes');
+    const noButton = document.getElementById('no');
+
+    noButton.addEventListener('click', () => {
+      yesButton.classList.add('enlarged');
+      noButton.textContent = 'U sure?';
+
+    }
+
+);
+  </script>
+
     </div>
     <script src="scripts/main.js"></script>
 </body>
