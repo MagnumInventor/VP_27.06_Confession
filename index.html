@@ -4,99 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Romantic Slide Show</title>
-        <link rel="stylesheet" href="styles/main.css">
-        <link rel="stylesheet" href="styles/pic2frame.css">
-        <link rel="stylesheet" href="styles/pic2circle.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/pic2frame.css">
+    <link rel="stylesheet" href="styles/pic2circle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="gradient">
-
-                <div class="main-date">
-                    <h1>12.06-27.06</h1>
-                    <h5>Enough time to become a couple!</h5>
-                    </div>
-                <div class="content-after-date" style="display:none;">
-
-
-
-        <div class="card" id="card1">
-            <div class="card-front">
-                <h2>Our first contact</h2>
+        <div class="stage active" id="main-date">
+            <div class="date-content">
+                <h1>12.06-27.06</h1>
+                <h5>Enough time to become a couple!</h5>
             </div>
+        </div>
+
+        <div class="stage" id="card1">
+            <div class="card">
+                <div class="card-front">
+                    <h2>Our first contact</h2>
+                </div>
                 <div class="stack">
-                <div class="card">
-                    <div class="image" src="media/FC1.jpg"></div>
+                    <div class="card">
+                        <img class="image" src="media/FC1.jpg" alt="First Contact">
+                    </div>
                 </div>
-                </div>
-            </div>
-
-
-        <div class="card" id="card2">
-            <div class="card-front">
-                <h3>Your ревнощі:</h3>
-            </div>
-            <div class="wrapper">
-            <div class="inner" style="--quantity: 10;">
-                <div class="card" style="--index: 0;--color-card: 142, 249, 252;">
-                <div src="media/zuel/FZ.jpg" class="img"></div>
-                </div>
-                <div class="card" style="--index: 1;--color-card: 142, 252, 204;">
-                <div src="media/zuel/SZ.jpg" class="img"></div>
-                </div>
-                <div class="card" style="--index: 2;--color-card: 142, 252, 157;">
-                <div src="media/zuel/TZ.jpg" class="img"></div>
-                </div>
-            </div>
             </div>
         </div>
 
-
-
-        <div class="card" id="card3">
-            <div class="card-front">
-                <h2>На що я повівся:</h2>
-            </div>
+        <div class="stage" id="card2">
+            <div class="card">
+                <div class="card-front">
+                    <h3>Your ревнощі:</h3>
+                </div>
                 <div class="wrapper">
-                <div class="inner" style="--quantity: 10;">
-                    <div class="card" style="--index: 0;--color-card: 142, 249, 252;">
-                    <div src="media/zuel/FP.jpg" class="img"></div>
-                    </div>
-                    <div class="card" style="--index: 1;--color-card: 142, 252, 204;">
-                    <div src="media/zuel/SP.jpg" class="img"></div>
-                    </div>
-                    <div class="card" style="--index: 2;--color-card: 142, 252, 157;">
-                    <div src="media/zuel/TZ.jpg" class="img"></div>
+                    <div class="inner" style="--quantity: 10;">
+                        <div class="card" style="--index: 0;--color-card: 142, 249, 252;">
+                            <img src="media/zuel/FZ.jpg" class="img" alt="Jealousy 1">
+                        </div>
+                        <div class="card" style="--index: 1;--color-card: 142, 252, 204;">
+                            <img src="media/zuel/SZ.jpg" class="img" alt="Jealousy 2">
+                        </div>
+                        <div class="card" style="--index: 2;--color-card: 142, 252, 157;">
+                            <img src="media/zuel/TZ.jpg" class="img" alt="Jealousy 3">
+                        </div>
                     </div>
                 </div>
-                </div>
+            </div>
         </div>
 
+        <div class="stage" id="card3">
+            <div class="card">
+                <div class="card-front">
+                    <h2>На що я повівся:</h2>
+                </div>
+                <div class="wrapper">
+                    <div class="inner" style="--quantity: 10;">
+                        <div class="card" style="--index: 0;--color-card: 142, 249, 252;">
+                            <img src="media/zuel/FP.jpg" class="img" alt="Tricked 1">
+                        </div>
+                        <div class="card" style="--index: 1;--color-card: 142, 252, 204;">
+                            <img src="media/zuel/SP.jpg" class="img" alt="Tricked 2">
+                        </div>
+                        <div class="card" style="--index: 2;--color-card: 142, 252, 157;">
+                            <img src="media/zuel/TP.jpg" class="img" alt="Tricked 3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <div class="final-screen" id="finalScreen">
-            
+        <div class="stage final-screen" id="finalScreen">
             <h2>Will you be my gurl? 💖</h2>
-            <img class="medium-gif" src="https://media.tenor.com/_lmitpAV2egAAAAM/rigby-cat.gif" alt="MeFr" />
-
-    <div class="buttons">
-      <button id="yes">YES SIRRR!</button>
-      <button id="no">Nah</button>
+            <img class="medium-gif" src="https://media.tenor.com/_lmitpAV2egAAAAM/rigby-cat.gif" alt="Cute Cat">
+            <div class="buttons">
+                <button id="yes">YES SIRRR!</button>
+                <button id="no">Nah</button>
+            </div>
+        </div>
     </div>
-  </div>
-
-  <script>
-    const yesButton = document.getElementById('yes');
-    const noButton = document.getElementById('no');
-
-    noButton.addEventListener('click', () => {
-      yesButton.classList.add('enlarged');
-      noButton.textContent = 'U sure?';
-
-    }
-
-);
-  </script>
-
-    </div>
+    
     <script src="scripts/main.js"></script>
 </body>
 </html>
