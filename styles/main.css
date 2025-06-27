@@ -231,9 +231,7 @@ button#yes.enlarged {
   h3 {
     font-size: 1.7rem;
   }
-  .card {
-    min-height: 250px;
-  }
+
   button {
     padding: 10px 20px;
     font-size: 1rem;
