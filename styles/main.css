@@ -16,6 +16,7 @@ body {
 .gradient {
   width: 100%;
   height: 100%;
+  min-height: 100vh;
   background: linear-gradient(
     45deg,
     #977c95,
@@ -81,6 +82,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  display: flex;
+  flex-direction: column;
+
   height: 100%;
   font-size: 2rem;
   color: #d81b60;
@@ -125,6 +129,7 @@ h2 {
   font-size: 40px;
   color: #ffffff;
   text-align: center;
+  padding-bottom: 25px;
   margin: 0;
   text-shadow: rgb(46, 46, 46) 2px 2px 12px;
   font-weight: bold;
@@ -174,7 +179,7 @@ a {
   font-family: "Montserrat";
   font-size: large;
 
-  padding-top: 100px;
+  padding-top: 25px;
   text-align: center;
 }
 
@@ -228,4 +233,27 @@ button#yes.enlarged-2 {
 
 button#yes.enlarged-3 {
   transform: scale(1.6);
+}
+
+.soft-cute-frame {
+  width: 100%; /* Контейнер заповнює ширину */
+  max-width: 500px; /* Опціонально: задає максимальну ширину */
+  aspect-ratio: 14 / 16; /* Пропорція 9:16 */
+  border-radius: 28px;
+  background: linear-gradient(135deg, #ffe6fa34 0%, #e0f7fa 100%);
+  box-shadow: 0 6px 24px 0 rgba(180, 180, 255, 0.18),
+    0 1.5px 6px 0 rgba(255, 182, 193, 0.12);
+  border: 2.5px solid #f8bbd0;
+
+  overflow: hidden; /* Забезпечує обрізання зайвого */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.soft-cute-frame img {
+  border-radius: 15px;
+  width: 100%; /* Зображення заповнює всю ширину контейнера */
+  height: 100%; /* Зображення заповнює всю висоту контейнера */
+  object-fit: cover; /* Забезпечує обрізання без спотворення пропорцій */
 }
