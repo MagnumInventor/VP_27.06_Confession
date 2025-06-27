@@ -8,18 +8,19 @@ document.addEventListener('DOMContentLoaded', () => {
         enlargeStep++;
         if (enlargeStep === 1) {
             yesButton.classList.add('enlarged');
-            noButton.textContent = 'U sure?';
+            noButton.textContent = 'Вік це тільки цифра';
         } else if (enlargeStep === 2) {
             yesButton.classList.remove('enlarged');
             yesButton.classList.add('enlarged-2');
-            noButton.textContent = 'Really sure?';
+            noButton.textContent = 'Я прям ряльно урод?';
         } else if (enlargeStep === 3) {
-            yesButton.classList.remove('enlarged-2');
-            yesButton.classList.add('enlarged-3');
-            noButton.textContent = 'OK fine!';
-            noButton.disabled = true;
-        }
-    });
+        noButton.textContent = 'Ясн';
+        noButton.disabled = true;
+        setTimeout(() => {
+            window.close();
+        }, 1200); // Закриє сторінку через 1.2 секунди
+    }
+});
 
     yesButton.addEventListener('click', () => {
         // Create celebration effect
