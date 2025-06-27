@@ -8,17 +8,21 @@ document.addEventListener('DOMContentLoaded', () => {
         enlargeStep++;
         if (enlargeStep === 1) {
             yesButton.classList.add('enlarged');
-            noButton.textContent = 'Вік це тільки цифра';
+            noButton.textContent = 'Вік це тільки цифра!';
         } else if (enlargeStep === 2) {
             yesButton.classList.remove('enlarged');
             yesButton.classList.add('enlarged-2');
             noButton.textContent = 'Я прям ряльно урод?';
         } else if (enlargeStep === 3) {
-        noButton.textContent = 'Ясн';
+        noButton.textContent = 'Пж';
         noButton.disabled = true;
         setTimeout(() => {
+        if (window.opener) {
             window.close();
-        }, 1200); // Закриє сторінку через 1.2 секунди
+        } else {
+            alert('Все ясно :(');
+        }
+    }, 1200);
     }
 });
 

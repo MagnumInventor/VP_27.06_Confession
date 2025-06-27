@@ -17,7 +17,7 @@
                     <div class="gallery">
                         <div class="photo-card">
                             <div>
-                                <img class="photo-container-img" src="media/pull/FP.jpg" alt="1">
+                                <img class="photo-container-img" src="media/pull/FP2.JPG" alt="1">
                             </div>
                         </div>
                         <div class="photo-card">
@@ -30,6 +30,24 @@
                                 <img class="photo-container-img" src="media/pull/TP.jpg" alt="3">
                             </div>
                         </div>
+                        <div class="photo-card">
+                            <div>
+                                <button src="audio/atend.mp3" id="heh">Які у мене відносини з Василівною?</button>
+                            </div>
+                        </div>
+
+    <audio id="ATENDSound" src="audio/atend.mp3" preload="auto"></audio>
+ 
+
+    <script>
+        document.getElementById('heh').addEventListener('click', function() {
+            const sound = document.getElementById('ATENDSound');
+            sound.currentTime = 1; // Перемотуємо на початок, щоб можна було грати звук багаторазово
+            sound.play();
+        });
+    </script>
+
+
                     </div> 
                 <a href="LastPage.html">
                      <button>Next</button>

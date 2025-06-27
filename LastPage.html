@@ -19,8 +19,11 @@
                 <button src="audio/yay.mp3" id="yes">YES SIRRR!</button>
                 <button src="audio/nay.mp3" id="no">Nah</button>
             </div>
-                <audio id="yaySound" src="audio/yay.mp3" preload="auto"></audio>
-    <audio id="naySound" src="audio/nay.mp3" preload="auto"></audio>
+    <audio id="yaySound" src="audio/yay.mp3" preload="auto"></audio>
+
+    <audio id="nay1Sound" src="audio/bo-womp.mp3" preload="auto"></audio>
+      <audio id="nayIDNSound" src="audio/nay.mp3" preload="auto"></audio>
+        <audio id="naySound3" src="audio/ben-yes-sound-effect.mp3" preload="auto"></audio>
 
     <script>
         document.getElementById('yes').addEventListener('click', function() {
@@ -29,11 +32,24 @@
             sound.play();
         });
 
+        const naySounds = [
+            document.getElementById('nay1Sound'),
+            document.getElementById('nayIDNSound'),
+            document.getElementById('naySound3')
+        ];
+        
+        let currentSoundIndex = 0;
+
         document.getElementById('no').addEventListener('click', function() {
-            const sound = document.getElementById('naySound');
+            // Відтворюємо поточний звук
+            const sound = naySounds[currentSoundIndex];
             sound.currentTime = 0;
             sound.play();
+            
+            // Збільшуємо індекс для наступного звука
+            currentSoundIndex = (currentSoundIndex + 1) % naySounds.length;
         });
+        
     </script>
         </div>
     </div>
