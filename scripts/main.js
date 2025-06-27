@@ -1,3 +1,6 @@
+
+/*
+
 document.addEventListener('DOMContentLoaded', () => {
     const stages = [
         document.getElementById('main-date'),
@@ -72,3 +75,5 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.appendChild(celebration);
     });
 });
+
+*/
