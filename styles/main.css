@@ -92,6 +92,19 @@ body {
   border-radius: 15px;
   background: transparent;
 }
+.card-front-third {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  font-size: 2rem;
+  color: #d81b60;
+  padding: 20px;
+  border-radius: 15px;
+  background: transparent;
+}
 
 .final-screen {
   width: 100%;
@@ -256,4 +269,80 @@ button#yes.enlarged-3 {
   width: 100%; /* Зображення заповнює всю ширину контейнера */
   height: 100%; /* Зображення заповнює всю висоту контейнера */
   object-fit: cover; /* Забезпечує обрізання без спотворення пропорцій */
+}
+
+/*DS GALLERY*/
+
+.gallery {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 0 auto;
+  padding: 25px;
+}
+
+.photo-card {
+  border-radius: 12px;
+  padding-bottom: 0px;
+  padding-top: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  background: linear-gradient(145deg, #f8f8f802, #ffffff18);
+  border: 1px solid #f0f0f0;
+}
+
+.photo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.photo-container {
+  position: relative;
+  padding-bottom: 20%; /* 1:5 співвідношення (100% / 5) */
+  background-color: #f9f9f9;
+}
+
+.photo-container-img {
+  width: 500px;
+  height: 100px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+
+  border-radius: 10px;
+}
+
+.photo-card:hover img {
+  transform: scale(1.03);
+}
+
+.photo-info {
+  padding: 18px;
+  text-align: center;
+}
+
+.photo-title {
+  margin: 0;
+  font-weight: 600;
+  color: #333;
+  font-size: 1.1em;
+}
+
+.photo-date {
+  color: #888;
+  font-size: 0.85em;
+  margin-top: 6px;
+}
+
+/* Адаптивність */
+@media (max-width: 900px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
 }

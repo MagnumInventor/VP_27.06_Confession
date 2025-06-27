@@ -1,46 +1,3 @@
-
-/*
-
-document.addEventListener('DOMContentLoaded', () => {
-    const stages = [
-        document.getElementById('main-date'),
-        document.getElementById('card1'),
-        document.getElementById('card2'),
-        document.getElementById('card3'),
-        document.getElementById('finalScreen')
-    ];
-    
-    const yesButton = document.getElementById('yes');
-    const noButton = document.getElementById('no');
-    let currentStage = 0;
-    
-    // Function to switch to the next stage
-    function nextStage() {
-        // Hide current stage
-        stages[currentStage].classList.remove('active');
-        
-        // Move to next stage
-        currentStage++;
-        
-        if (currentStage < stages.length) {
-            // Show next stage after a delay
-            setTimeout(() => {
-                stages[currentStage].classList.add('active');
-                
-                // Set timeout for next stage except for the final screen
-                if (currentStage < stages.length - 1) {
-                    setTimeout(nextStage, 7500);
-                }
-            }, 1000);
-        }
-    }
-    
-    // Initialize the first stage
-    stages[0].classList.add('active');
-    
-    // Start the sequence after 7.5 seconds on the first stage
-    setTimeout(nextStage, 7500);
-    
     // Button interactions
     noButton.addEventListener('click', () => {
         if (!yesButton.classList.contains('enlarged')) {
@@ -56,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
             noButton.textContent = 'OK fine!';
             noButton.disabled = true;
         }
-    });
     
     yesButton.addEventListener('click', () => {
         // Create celebration effect
@@ -75,5 +31,3 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.appendChild(celebration);
     });
 });
-
-*/
